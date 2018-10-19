@@ -1,0 +1,24 @@
+{
+  "name": "xlerr/connpool",
+  "description": "Database connection pool",
+  "require": {
+    "php": ">=7.0",
+    "ext-json": "*",
+    "ext-sockets": "*",
+    "symfony/config": "^4.1",
+    "workerman/workerman": "^3.5"
+  },
+  "require-dev": {
+
+  },
+  "autoload": {
+    "psr-4": {
+      "connpool\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "connpool\\tests\\": "tests"
+    }
+  }
+}
