@@ -3,6 +3,8 @@
 namespace connpool;
 
 use connpool\commands\Command;
+use connpool\commands\Pipeline;
+use connpool\commands\Response;
 use connpool\lib\Connection;
 use connpool\lib\PDO;
 use Workerman\Connection\TcpConnection;
@@ -56,7 +58,9 @@ class Core
 
     public function onMessage(TcpConnection $connection, string $data)
     {
-        $connection->send(Command::make($this, $connection, $data)->execute());
+        $response = Response::make($this, $connection, json_encode($data, true) ?? []);
+
+        $connection->send($response->toString());
     }
 
     public function onClose(TcpConnection $connection)
