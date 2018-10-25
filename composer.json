@@ -4,9 +4,10 @@
   "require": {
     "php": ">=7.0",
     "ext-json": "*",
+    "ext-pdo": "*",
     "ext-sockets": "*",
-    "symfony/config": "^4.1",
-    "workerman/workerman": "^3.5"
+    "workerman/workerman": "^3.5",
+    "react/event-loop": "^1.0"
   },
   "require-dev": {
 

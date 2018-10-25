@@ -2,7 +2,7 @@
 
 namespace connpool\commands;
 
-class PrintPart extends BasePart implements PartInterface
+class PrintPart extends BasePart
 {
     /**
      * @param          $params

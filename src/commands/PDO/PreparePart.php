@@ -23,6 +23,7 @@ class PreparePart extends BasePart implements PartInterface
             throw new \Exception('缺少SQL语句');
         }
 
+        /** @var \connpool\lib\Connection $conn */
         $conn = $next($request);
 
         return $conn->db->prepare($sql);
